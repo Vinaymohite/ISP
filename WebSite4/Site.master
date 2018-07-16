@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+
+    <title></title>
+  
+    
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="loginDisplay" style="background-color: #0000FF">
+              
+                  
+               
+               
+               
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="25px" 
+                    ImageUrl="~/img/Facebook_icon.svg.png" onclick="ImageButton1_Click" 
+                    Width="25px" />
+&nbsp;
+                <asp:ImageButton ID="ImageButton2" runat="server" Height="25px" 
+                    ImageUrl="~/img/logo_chrome.png" onclick="ImageButton1_Click" Width="25px" />
+&nbsp;&nbsp;<asp:ImageButton ID="ImageButton3" runat="server" Height="25px" 
+                    ImageUrl="~/img/YouTube-icon-full_color.png" onclick="ImageButton3_Click" 
+                    Width="25px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Image 
+                    ID="Image2" runat="server" ImageUrl="~/img/th_login_icon.png" 
+                    Width="30px" Height="25px" />
+                <asp:Button ID="Button3" runat="server" onclick="Button3_Click" 
+                    Text="Admin" BackColor="Blue" BorderStyle="None" ForeColor="Black" 
+                    BorderColor="Blue" />
+                &nbsp;&nbsp;&nbsp;<asp:Image ID="Image3" runat="server" Height="26px" 
+                    ImageUrl="~/img/user.png" />
+&nbsp;<asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="User" 
+                    BackColor="Blue" BorderColor="Blue" ForeColor="Black" BorderStyle="None" />
+            &nbsp;&nbsp;
+                <br />
+                  <asp:Image ID="Image1" runat="server" 
+                        Height="109px" ImageUrl="~/img/logo.jpg" 
+                        Width="935px" />
+            </div>
+            <div class="clear hideSkiplink" style="background-color: #0000ff">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/Aboutus.aspx" Text="Aboutus" Value="Aboutus">
+                            <asp:MenuItem NavigateUrl="~/History.aspx" Text="History" Value="History"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Plans.aspx" Text="Plans" Value="Plans">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Management" Value="Management"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Registration" Value="Registration"></asp:MenuItem>
+                        <asp:MenuItem Text="Feedback" Value="Feedback">
+                            <asp:MenuItem NavigateUrl="~/User.aspx" Text="User" Value="User"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Fresher.aspx" Text="Fresher" Value="Fresher"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Contact us" NavigateUrl="~/Contact.aspx" Value="Contact us"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               
+                <p style="background-image: url('/WebSite4/img/Best-ISP-in-Toronto-1200x900.jpg')">
+                </p>
+            </asp:ContentPlaceHolder>
+               
+        </div>
+    </div>
+    <div class="footer">
+        
+        Copyright @ 2016 T10 Networks Internet Service Providers<br />
+        Website Developed by MohiteTechnologies Pvt.Ltd</div>
+    </form>
+</body>
+</html>

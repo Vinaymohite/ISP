@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="loginDisplay">
+                <asp:Image ID="Image1" runat="server" 
+                        Height="109px" ImageUrl="~/img/logo.jpg" 
+                        Width="935px" />
+                  
+                <br /><br />
+               
+               
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Image 
+                    ID="Image2" runat="server" />
+                &nbsp;<asp:Button ID="Button3" runat="server" onclick="Button3_Click" Text="Admin" />
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="User" />
+            &nbsp;&nbsp;
+                <asp:Button ID="Button1" runat="server"  Text="Logout" onclick="Button1_Click" />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/Aboutus.aspx" Text="Aboutus" Value="Aboutus">
+                            <asp:MenuItem NavigateUrl="~/History.aspx" Text="History" Value="History"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Plans.aspx" Text="Plans" Value="Plans">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Management" Value="Management"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Registration" Value="Registration"></asp:MenuItem>
+                        <asp:MenuItem Text="Feedback" Value="Feedback">
+                            <asp:MenuItem NavigateUrl="~/User.aspx" Text="User" Value="User"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Fresher.aspx" Text="Fresher" Value="Fresher"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Contact us" NavigateUrl="~/Contact.aspx" Value="Contact us"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               
+                <p style="background-image: url('/WebSite4/img/1886497.jpg')">
+                </p>
+            </asp:ContentPlaceHolder>
+               
+        </div>
+    </div>
+    <div class="footer">
+        
+        Copyright @ 2016 T10 Networks Internet Service Providers<br />
+        Website Developed by MohiteTechnologies Pvt.Ltd</div>
+    </form>
+</body>
+</html>
